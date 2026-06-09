@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { ResendModule } from './resend/resend.module';
-import { AppconfigModule } from './appconfig/appconfig.module';
+import { MailtrapModule } from './mailtrap/mailtrap.module';
+import { AppConfigModule } from './app-config/app-config.module';
 
 @Module({
-  imports: [ResendModule, AppconfigModule],
+  imports: [MailtrapModule, AppConfigModule],
   controllers: [AppController],
   providers: [AppService],
 })

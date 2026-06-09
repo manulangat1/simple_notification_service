@@ -1,0 +1,16 @@
+
+services:
+  server:
+    build:
+      context: .
+    image: manulangat/blog_by_langat:notifications
+    environment:
+      NODE_ENV: production
+      MAIL_TRAP_API_KEY: test-key
+      MAILTRAP_SENDER_EMAIL: hello@kipchirchirlangat.com
+      MAILTRAP_SENDER_NAME: Uptique
+      REDIS_HOST: test-key
+      REDIS_PASSWORD: test-password
+    ports:
+      - 3000:3000
+   
